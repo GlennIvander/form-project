@@ -1,0 +1,77 @@
+<!-- As a user, I want to see a title with id="title" in H1 sized text. Line 31-->
+<!-- As a user, I want to see a short explanation with id="description" in P sized text. Line 32-->
+<!-- As a user, I want to see a form with id="survey-form". Line 33-->
+<!-- As a user, I want to be required to enter my name in a field with id="name" . (Inside form element) Line 36-->
+<!-- As a user, I want to be required to enter an email in a field with id="email" . (Inside form element) Line 40-->
+<!-- As a user, I want to see a validation error if I enter an email that is not formatted correctly. Line 40-->
+<!-- As a user, I should be able to enter a number in a field with id="number". Line 44-->
+<!-- As a user, if I enter non-numbers in the number input, I want to see an HTML5 validation error. Line 44-->
+<!-- As a user, if I enter numbers outside the range of the number input, which are defined by the min and max attributes, I will see an HTML5 validation error. Line 44-->
+<!-- For the name, email, and number input fields inside the form I can see corresponding labels that describe the purpose of each field with the following ids: id="name-label", id="email-label", and id="number-label" Line 35, 39, 43-->
+<!-- For the name, email, and number input fields, I want to see placeholder text that gives me a description or instructions for each field. Line 36, 40, 44-->
+<!-- Inside the form element, I want a select an option from a dropdown that has a corresponding id="dropdown" Line 48-->
+<!-- Inside the form element, I want to select a field from one or more groups of radio buttons. Each group should be grouped using the name attribute. Line 57-60-->
+<!-- Inside the form element, I want to select several fields from a series of checkboxes, each of which must have a value attribute. Line 64-67-->
+<!-- Inside the form element, I want to see a textarea at the end for additional comments. Line 70-->
+<!-- Inside the form element, I want to see a button with id="submit" to submit all my inputs. Line 74-->
+<!-- I can submit my inputs to the address bar. Line 33-->
+
+
+<!DOCTYPE html>
+<html>
+    <head>        
+        <title id="title">Survey Form</title>
+        <link href="https://www.w3schools.com/w3css/4/w3.css" rel="stylesheet" type="text/css"/>
+        <link href="SF.css" rel="stylesheet" type="text/css"/>    
+    </head>
+    <body>
+        <div id="image">
+            <img src="SFPNRTrain.jpg">
+        </div> 
+        <h1 id="title"> <b>Train Service Satisfaction Survey</b></h1>        
+        <p id="description">We value your experience and feedback! We are conducting a survey to gather insights on passenger satisfaction with our train services. Your input will help us identify areas for improvement and enhance the overall quality of our service.</p>
+        <form method="get" id="survey-form" class="w3-container">
+            <br/>
+            <label for="name" id="name-label">Name:</label>
+            <input class="w3-input" type="text" name="name" id="name" placeholder="Surname, First Name MN" required>
+            <br/>
+            <br/>
+            <label for="email" id="email-lable">Email:</label>
+            <input class="w3-input" type="email" name="email" id="email" placeholder="username@email.com" required>
+            <br/>
+            <br/>
+            <label for="number" id="number-lable">Age:</label>
+            <input class="w3-input" type="number" name="number" id="number" placeholder="Enter age" min="18" max="30" required>
+            <br/>
+            <br/>
+            <label for="dropdown">How often do you use our train service?</label>            
+            <select class="w3-check" id="dropdown" name="frequency">
+                <option value="daily">Daily</option>
+                <option value="weekly">Weekly</option>
+                <option value="monthly">Monthly</option>
+                <option value="rarely">Rarely</option> 
+            </select>
+            <br/>
+            <br/>    
+            <label for="attribute">How would you rate our train service?</label>
+            <input class="w3-check" type="radio" name="attribute" value="excellent"> Excellent
+            <input class="w3-check" type="radio" name="attribute" value="good"> Good
+            <input class="w3-check" type="radio" name="attribute" value="average"> Average
+            <input class="w3-check" type="radio" name="attribute" value="poor"> Poor
+            <br/>
+            <br/> 
+            <label for="attribute">What aspects of our service do you value? (Select all that apply):</label>
+            <input class="w3-check" type="checkbox" name="attribute" punctuality="red">Punctuality
+            <input class="w3-check" type="checkbox" name="attribute" cleanliness="red">Cleanliness
+            <input class="w3-check" type="checkbox" name="attribute" comfort="red">Comfort
+            <input class="w3-check" type="checkbox" name="attribute" staff="red">Staff
+            <br/> 
+            <br/>            
+            <label for="comments">Addtional comments:</label>
+            <textarea name="address" maxlength="50" rows="6" cols="30"  placeholder="Enter additional comments" required></textarea>
+            <br/>            
+            <br/>
+            <input class="w3-button w3-round-xxlarge w3-blue" type="submit" id="submit" value="Submit">
+        </form>
+    </body>
+</html>
